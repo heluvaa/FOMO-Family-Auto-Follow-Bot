@@ -1,0 +1,15 @@
+{
+  "auth_token": "Bearer YOUR_TOKEN_HERE",
+  "cookie": "YOUR_COOKIE_HERE",
+  "my_user_id": "your-user-id-uuid",
+  "my_user_handle": "your_username",
+
+  "targets_to_scrape": [
+    "target-user-id-1",
+    "target-user-id-2"
+  ],
+
+  "limit_per_target": 50,
+  "delay_min_seconds": 0.8,
+  "delay_max_seconds": 2.0
+}

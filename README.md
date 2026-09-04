@@ -77,7 +77,7 @@ Use `config.example.json` (with no real values) as a template if you plan to sha
 ## How to Run
 
 ```bash
-python3 bot_autofollow.py
+python3 main.py
 ```
 
 What happens step by step:
@@ -102,6 +102,19 @@ What happens step by step:
 - **`[ERROR] File 'config.json' tidak ditemukan`** → make sure `config.json` is in the same folder where you run the script.
 - **401 / 403 status on requests** → your token/cookie has expired; log in again and grab a fresh token.
 - **`Tidak ada target baru untuk difollow`** → all followers from the scraped targets are already followed by you.
+
+## Support / Donate
+
+If this project helps you, consider supporting its development. Any amount is greatly appreciated 🙏
+
+- **Bitcoin:** `13YVRErt7gqG2vVqPSg6ZbXibc4EhuqYZn`
+- **EVM Address:** `0x13972547B1c875fC46700364B5A985F39Ce4E46b`
+- **Solana:** `GNJGHfr1VygCKmLRxTmrgNXEQm77G1wzyCDjHqFkdHM9`
+- **TRX:** `TPW9tZ1Q44nDrCrkuwR2XaGiPohvx41KEC`
+- **Sociabuzz:** https://sociabuzz.com/xzvxco/tribe
+- **FOMO Family:** [@kobo_kanaeru](https://fomo.family)
+
+Thank you, whatever you can give truly means a lot!
 
 ## License
 

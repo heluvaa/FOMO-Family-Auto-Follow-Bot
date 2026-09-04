@@ -77,7 +77,7 @@ Sediakan `config.example.json` (tanpa isi asli) sebagai template untuk publik ji
 ## Cara Menjalankan
 
 ```bash
-python3 bot_autofollow.py
+python3 main.py
 ```
 
 Alur yang terjadi:
@@ -102,6 +102,19 @@ Alur yang terjadi:
 - **`[ERROR] File 'config.json' tidak ditemukan`** → pastikan `config.json` ada di folder yang sama saat menjalankan script.
 - **Status 401 / 403 saat request** → token/cookie sudah expired, login ulang dan ambil token baru.
 - **`Tidak ada target baru untuk difollow`** → semua followers dari target yang di-scrape sudah kamu follow sebelumnya.
+
+## Support / Donate
+
+Kalau project ini membantu kamu, boleh banget support pengembangannya. Berapapun jumlahnya sangat saya hargai apresiasinya 🙏
+
+- **Bitcoin:** `13YVRErt7gqG2vVqPSg6ZbXibc4EhuqYZn`
+- **EVM Address:** `0x13972547B1c875fC46700364B5A985F39Ce4E46b`
+- **Solana:** `GNJGHfr1VygCKmLRxTmrgNXEQm77G1wzyCDjHqFkdHM9`
+- **TRX:** `TPW9tZ1Q44nDrCrkuwR2XaGiPohvx41KEC`
+- **Sociabuzz:** https://sociabuzz.com/xzvxco/tribe
+- **FOMO Family:** [@kobo_kanaeru](https://fomo.family)
+
+Terima kasih, berapapun sangat saya hargai apresiasinya!
 
 ## Lisensi
 
