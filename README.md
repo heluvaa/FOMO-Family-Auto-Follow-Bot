@@ -4,7 +4,7 @@
 
 A Python script to automate following accounts on [fomo.family](https://fomo.family), with features for scraping followers from multiple targets, skipping already-followed accounts, delaying between requests, and reporting followers/following stats before & after running.
 
-> ⚠️ **Disclaimer:** This script interacts with fomo.family's internal API using your personal account token/cookie. Using automation like this may violate the platform's Terms of Service and could result in rate-limiting or account suspension. Use at your own risk, ideally with reasonable volume (not mass-following thousands of accounts at once).
+> ⚠️ **Disclaimer:** This script interacts with fomo.family's internal API using your personal account token/cookie. Using automation like this may violate the platform's Terms of Service and could result in rate-limiting or account suspension. Use at your own risk, ideally with reasonable volume (not mass-following thousands of accounts at once). **DYOR (Do Your Own Research)** — you are fully responsible for how you use this script; the author takes no responsibility for any consequences.
 
 ## Features
 
@@ -27,11 +27,24 @@ Install the dependency:
 pip install curl_cffi
 ```
 
+## Getting the Code
+
+Clone this repository:
+
+```bash
+git clone https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot.git
+cd FOMO-Family-Auto-Follow-Bot
+```
+
+Don't have Git installed? Download it here: [git-scm.com/downloads](https://git-scm.com/downloads)
+
+Alternatively, click the green **Code** button on the [repo page](https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot) → **Download ZIP**, then extract it.
+
 ## File Structure
 
 ```
 .
-├── bot_autofollow.py   # Main script
+├── main.py   # Main script
 ├── config.json          # Configuration (token, cookie, targets, etc.)
 └── README.md
 ```
@@ -96,6 +109,97 @@ What happens step by step:
 | `limit_per_target` | 50 | Total cap on unique accounts to follow in one run (not per target) |
 | `delay_min_seconds` | 0.8 | Minimum delay between follows (seconds) |
 | `delay_max_seconds` | 2.0 | Maximum delay between follows (seconds) |
+
+## Platform-Specific Setup
+
+### 📱 Android (Termux)
+
+1. Install [Termux](https://termux.dev/) from F-Droid (recommended) or the Play Store.
+2. Open Termux and update packages:
+   ```bash
+   pkg update && pkg upgrade -y
+   ```
+3. Install Python and Git:
+   ```bash
+   pkg install python git -y
+   ```
+4. Clone the repo (or transfer the files manually into Termux's home folder):
+   ```bash
+   git clone https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot.git
+   cd FOMO-Family-Auto-Follow-Bot
+   ```
+5. Install the dependency:
+   ```bash
+   pip install curl_cffi
+   ```
+6. Create your `config.json` (copy from `config.example.json` and fill in your values):
+   ```bash
+   cp config.example.json config.json
+   nano config.json
+   ```
+   (Edit the file, then press `Ctrl + O`, `Enter`, `Ctrl + X` to save and exit nano)
+7. Run the bot:
+   ```bash
+   python main.py
+   ```
+
+> Tip: Termux may close background processes when the app isn't in focus. Enable "Acquire wakelock" in the Termux notification, or disable battery optimization for Termux in your phone's app settings, to prevent the script from being killed mid-run.
+
+### 🪟 Windows
+
+1. Download and install [Python](https://www.python.org/downloads/) (check **"Add Python to PATH"** during installation).
+2. Download and install [Git for Windows](https://git-scm.com/downloads) (optional, only needed if cloning via command line).
+3. Open **Command Prompt** or **PowerShell**.
+4. Clone the repository:
+   ```powershell
+   git clone https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot.git
+   cd FOMO-Family-Auto-Follow-Bot
+   ```
+   (Or skip Git entirely: click the green **Code** button on the [repo page](https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot) → **Download ZIP** → extract it → open Command Prompt in that folder)
+5. Install the dependency:
+   ```powershell
+   pip install curl_cffi
+   ```
+6. Create your `config.json` by copying `config.example.json` and filling in your values (you can edit it with Notepad).
+7. Run the bot:
+   ```powershell
+   python main.py
+   ```
+
+> If `python` isn't recognized, try `py` instead (`py main.py`), or reinstall Python with "Add to PATH" checked.
+
+### 🖥️ VPS / Linux Server
+
+1. Connect via SSH to your VPS.
+2. Install Python and pip if not already available:
+   ```bash
+   sudo apt update && sudo apt install python3 python3-pip git -y
+   ```
+3. Clone the repo:
+   ```bash
+   git clone https://github.com/heluvaa/FOMO-Family-Auto-Follow-Bot.git
+   cd FOMO-Family-Auto-Follow-Bot
+   ```
+4. Install the dependency:
+   ```bash
+   pip3 install curl_cffi
+   ```
+5. Create your `config.json`:
+   ```bash
+   cp config.example.json config.json
+   nano config.json
+   ```
+6. Run the bot directly:
+   ```bash
+   python3 main.py
+   ```
+7. To keep it running after you disconnect SSH (optional), use `screen` or `tmux`:
+   ```bash
+   sudo apt install screen -y
+   screen -S autofollow
+   python3 main.py
+   # Press Ctrl+A then D to detach; reattach later with: screen -r autofollow
+   ```
 
 ## Troubleshooting
 
