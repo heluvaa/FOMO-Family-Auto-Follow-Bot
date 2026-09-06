@@ -216,7 +216,6 @@ Kalau project ini membantu kamu, boleh banget support pengembangannya. Berapapun
 - **Solana:** `GNJGHfr1VygCKmLRxTmrgNXEQm77G1wzyCDjHqFkdHM9`
 - **TRX:** `TPW9tZ1Q44nDrCrkuwR2XaGiPohvx41KEC`
 - **Sociabuzz:** https://sociabuzz.com/xzvxco/tribe
-- **FOMO Family:** [@kobo_kanaeru](https://fomo.family)
 
 Terima kasih, berapapun sangat saya hargai apresiasinya!
 
